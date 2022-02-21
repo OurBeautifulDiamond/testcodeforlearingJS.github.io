@@ -1,7 +1,7 @@
 let elMap = document.getElementById('loc');
 let msg = `현재 위치 정보를 얻을 수 없습니다.`;
 
-if (Modernizer.geolocation) {
+if (Modernizr.geolocation) {
   navigator.geolocation.getCurrentPosition(success, fail);
   elMap.textContent = `위치 확인중...`;
 } else {
